@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>restaurants</title>
+</head>
+<body>
+	<h1>restaurant List</h1>
+
+	<a href="/home">Back</a> |
+	<a href="/logout">logout</a>
+
+<br><br>
+	
+
+	<% for(var i=0; i< restaurant.length; i++){ %>
+	<table border="1" align="center" >
+		<tr>
+			<td><h2> <%= restaurant[i].name %> </h2></td>
+		</tr>
+		<tr>
+			<td><h4>Location : </h4><%= restaurant[i].location %></td>
+		</tr>
+		<tr>
+			<td><h4>Background Of this Restaurant: </h4><br> <%= restaurant[i].background %></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="/restaurant/menu/<%= restaurant[i].id %>"> Menu </a>
+			</td>
+		</tr>
+	</table>	
+	<br><br>
+			
+		
+	<% } %>
+	
+</body>
+</html>
